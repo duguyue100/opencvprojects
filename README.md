@@ -25,6 +25,18 @@ This repository includes all the practices I wrote and projects I did in OpenCV.
 * Show image: `imshow("window's name", image)`.
 * Waiting for key stroke: `waitKey(0)`.
 * Seems like you don't have to destroy and release resource anymore.
+* `cvtColor` is able to perform colour transformation, in this case, `CV_BGR2GRAY` specify that image is changed from BGR format to Grayscale format. And if you look at it, there are many of them.
+* Write image: `imwrite("address",image)` is the corresponding function for writing image to disk.
+* The function and data type mentioned above can be found in `cv` class.
+* Some interesting facts about `Mat` class
+    + If you perform something like `A=C` or `Mat B(A)`, different `Mat` object will have certainly the different headers, but they are all pointing to the same data matrix.
+    + Use `A.clone()` or `A.copyTo(B)` instead.
+    + You don't need to worry about memory management.
+    + Supporting storage format: RGB, HSV & HLS, YCrCb (JPEG) and CIE L*a*b*
+    + There are some Matlab style function available to use `Mat::eye`, `Mat::ones`, `Mat::zeros`
+    + Output formatting is pretty interesting.
+    + Can format a vector to matrix
+
 
 ###Contacts###
 

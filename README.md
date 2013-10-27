@@ -36,6 +36,10 @@ This repository includes all the practices I wrote and projects I did in OpenCV.
     + There are some Matlab style function available to use `Mat::eye`, `Mat::ones`, `Mat::zeros`
     + Output formatting is pretty interesting.
     + Can format a vector to matrix
+* The channels of stored image is BGR instead of RGB.
+* use `cvCaptureFromCAM(0)` to open camera access, the function will return a `CvCapture` object.
+* `cvQueryFrame(capture)` will return a `IplImage` object by definition. But if you are using newer version of OpenCV, you can directly change it to a `Mat` image.
+* You need to call `cvReleaseCapture(capture)` after displaying the image, the function will release the resources allocated on the capturer.
 
 
 ###Contacts###
